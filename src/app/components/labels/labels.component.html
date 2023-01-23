@@ -1,0 +1,46 @@
+
+<style>
+
+.button-container {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.button {
+  margin: 0 5px;
+  border-radius: 10px;
+
+}
+
+.custom-button {
+    border-radius: 5px;
+    border: 1px solid white;
+    color: white;
+    float: left;
+    margin-right: 10px; /* add space between buttons */
+    width: 100px;
+  height: 50px;
+  font-size: 15px;
+
+}
+
+
+.inputt{
+  margin-right: 10px;
+}
+</style>
+
+
+
+<form>
+    <input [(ngModel)]="buttonName" name="buttonName" class="inputt" placeholder="Label name"  >
+    <button (click)="addButton()" class="button">Add Label</button>
+    
+</form>
+<br>
+
+<div class="button-container">
+<div *ngFor="let button of buttons">
+    <button class="custom-button" [style.background-color]="button.color" >{{ button.name }}</button>
+</div>
+</div>

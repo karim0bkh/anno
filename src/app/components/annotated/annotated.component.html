@@ -1,0 +1,20 @@
+<style>
+    .comment {
+      resize: none;
+      height: 100px;
+      width: 1000px;
+    }
+    #btnanno {
+    border-radius: 10px;
+}
+
+#toBeAnnotated{
+    font-size: 20px;
+    line-height: 2; 
+}
+
+  </style>
+<br><br>
+<textarea #toBeAnnotated class="comment" id="toBeAnnotated" ></textarea>
+<br>
+<button (click)="onClick()" id = "btnanno">Start annotating</button>
